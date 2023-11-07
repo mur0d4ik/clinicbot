@@ -1,78 +1,49 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton
 
 
-main_menu = ReplyKeyboardMarkup(
-    keyboard = [
-        [
-            KeyboardButton(text = 'Uzbek🇺🇿')
-        ]
-    ],
-    resize_keyboard = True
-)
+lang = ReplyKeyboardMarkup(resize_keyboard = True).add(KeyboardButton(text = 'Uzbek🇺🇿'))
+
+phone_number = ReplyKeyboardMarkup(resize_keyboard = True).add(KeyboardButton(text = 'Telefon raqamni yuborish☎️', request_contact = True))
 
 
-contact = ReplyKeyboardMarkup(
-    keyboard = [  
-        [
-            KeyboardButton('Nomeringizni yuboring ☎️', request_contact=True)
-        ]
-    ],
-    resize_keyboard = True
-)
 
 
-kasallik = ['Qandli diabet','Semizlik']
 
+disease_list = ['Qandli diabet', 'Semizlik']
 
-async def kasallik_():
-    buttons = ReplyKeyboardMarkup(resize_keyboard = True, row_width = 2)
-    
-    for i in kasallik:
-        buttons.insert(KeyboardButton(text = i))    
-        
-    return buttons
+async def diseaseF():
+    buttons = ReplyKeyboardMarkup(resize_keyboard = True)
 
+    for i in disease_list:
+        buttons.insert(KeyboardButton(i))
 
-tiplar = ['I tip', 'II tip', 'Bilmayman💁‍♂️']
-
-
-async def tiplar_():
-    buttons = ReplyKeyboardMarkup(resize_keyboard = True, row_width = 2)
-    
-    for i in tiplar:
-        buttons.insert(KeyboardButton(text = i)) 
-        
-    return buttons
-
-
-javob = ['Xa', 'Yoq']
-javob2 = ['XA', 'YOQ']
-
-async def javob_():
-    buttons = ReplyKeyboardMarkup(resize_keyboard = True, row_width = 2)
-    
-    for i in javob:
-        buttons.insert(KeyboardButton(text = i))
-        
     return  buttons
 
 
-async def javob_2():
+
+
+
+disease_type_list = ['I - tip', 'II - tip', 'Bilmayman🤷‍♂️']
+
+async def disease_typeF():
     buttons = ReplyKeyboardMarkup(resize_keyboard = True, row_width = 2)
-    
-    for i in javob2:
-        buttons.insert(KeyboardButton(text = i))
-        
-    return  buttons
+
+    for i in disease_type_list:
+        buttons.insert(i)
+
+    return buttons
 
 
-yosh = ['1 - 25 yoshgacha', '25 va unadan yuqori']
 
 
-async def yosh_():
-    buttons = ReplyKeyboardMarkup(resize_keyboard = True, row_width = 2)
-        
-    for i in yosh:
-        buttons.insert(KeyboardButton(text = i))
-        
-    return buttons 
+
+
+answer_list = ['XA', 'YOQ']
+
+async def answerF():
+    buttons = ReplyKeyboardMarkup(resize_keyboard = True)
+
+    for i in answer_list:
+        buttons.insert(KeyboardButton(i))
+
+    return buttons
