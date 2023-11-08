@@ -10,3 +10,10 @@ class User(StatesGroup):
     answer_type2 = State()
     weight_type2 = State()
     height_type2 = State()
+
+    #Bilmayman
+    age_type3 = State()
+    answer_type3 = State()
+    weight_type3 = State()
+    height_type3 = State()
+    location = State()

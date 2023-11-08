@@ -47,3 +47,35 @@ async def answerF():
         buttons.insert(KeyboardButton(i))
 
     return buttons
+
+
+answer_list2 = ['Xa', 'Yoq']
+
+async def answer2F():
+    buttons = ReplyKeyboardMarkup(resize_keyboard = True)
+
+    for i in answer_list2:
+        buttons.insert(KeyboardButton(i))
+
+    return buttons
+
+
+year_list = ['1-25 yoshgacha', '25 va undan yuqori']
+
+
+async def yearF():
+    buttons = ReplyKeyboardMarkup(resize_keyboard = True)
+
+    for i in year_list:
+        buttons.insert(KeyboardButton(i))
+
+    return buttons
+
+
+
+location = ReplyKeyboardMarkup(resize_keyboard = True)
+
+async def loc():
+    location.add('Locatsiya yuborish')
+
+    return location
